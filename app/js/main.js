@@ -118,29 +118,14 @@ startNavLink.forEach((startNavLink, index) => {
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 function grid() {
+
 	let msnry = new Masonry( '.grid', {
 		itemSelector: '.grid-item',
 		transitionDuration: 0,
 	});
-
 	
 	//var bricklayer = new Bricklayer(document.querySelector('.bricklayer'));
-	const gridItem = document.querySelectorAll('.grid-item');
-	gridItem.forEach(gridItem => {
-		const img = gridItem.querySelector('img');
-		img.addEventListener('load', function () {
-			gridItem.style.setProperty('--aspect-ratio', img.naturalHeight / img.naturalWidth * 100 + '%');
-			img.classList.add('_loaded');
-			msnry.layout();
-			setTimeout(() => {
-				gridItem.classList.add('_loaded');
-			},100)
-			setTimeout(() => {
-				gridItem.classList.add('_disabled-loading-anim');
-			},400)
-		})
-		
-	})
+	
 
 
 	let lazy = document.querySelectorAll('.lazy');
@@ -168,6 +153,22 @@ function grid() {
 
 	setTimeout(() => {
 		scroll();
+		const gridItem = document.querySelectorAll('.grid-item');
+		gridItem.forEach(gridItem => {
+			const img = gridItem.querySelector('img');
+			img.addEventListener('load', function () {
+				gridItem.style.setProperty('--aspect-ratio', img.naturalHeight / img.naturalWidth * 100 + '%');
+				img.classList.add('_loaded');
+				msnry.layout();
+				setTimeout(() => {
+					gridItem.classList.add('_loaded');
+				},100)
+				setTimeout(() => {
+					gridItem.classList.add('_disabled-loading-anim');
+				},400)
+			})
+			
+		})
 		document.addEventListener('scroll', scroll);
 	},100)
 }
