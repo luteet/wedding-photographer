@@ -1,0 +1,39 @@
+
+@use 'sass:math';
+
+$container: 1440;
+
+:root {
+	--title-font: 'Syne', sans-serif;
+	--main-font: 'Poppins', sans-serif;
+
+	--white: #FFF;
+	--black: #000;
+	--gray: #888888;
+	--dark: #1F1F1F;
+	--dark-hover: #2c2c2c;
+	--dark-active: #161616;
+	--light: #EFEEEE;
+
+	--container-padding: 20px;
+}
+
+@font-face {
+	@include font-include('Syne', 400, swap, normal, 'Syne-Regular');
+}
+
+@font-face {
+	@include font-include('Poppins', 300, swap, normal, 'Poppins-Light');
+}
+
+@font-face {
+	@include font-include('Poppins', 400, swap, normal, 'Poppins-Regular');
+}
+
+@font-face {
+	@include font-include('Poppins', 500, swap, normal, 'Poppins-Medium');
+}
+
+@font-face {
+	@include font-include('Poppins', 600, swap, normal, 'Poppins-SemiBold');
+}

@@ -1,0 +1,260 @@
+.header {
+	position: sticky;
+	left: 0; top: 0;
+	width: 100%;
+	padding-top: 25px; padding-bottom: 25px;
+	padding-left: var(--container-padding); padding-right: var(--container-padding);
+	
+	@include _992 {
+		position: static;
+		padding-top: 55px; padding-bottom: 60px;
+		padding-left: 80px; padding-right: 80px;
+	}
+
+	background: var(--white);
+
+	&._fixed {
+		position: fixed;
+		background: transparent;
+	}
+
+	transition: opacity .3s ease, visibility .3s ease;
+	opacity: 1;
+
+	&._always-hide {
+		opacity: 0; visibility: hidden;
+	}
+	
+	&._hide {
+		opacity: 0; visibility: hidden;
+		&._top {
+			opacity: 1; visibility: visible;
+		}
+	}
+
+	//padding-right: var(--popup-padding) !important;
+
+	//transform: translate(0, var(--pos));
+
+	//transition: transform .2s ease;
+
+	z-index: 99;
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&__logo {
+		max-width: 205px;
+		@include _768 {
+			max-width: 306px;
+		}
+		position: relative;
+		z-index: 3;
+		transform: translate3d(0,0,0);
+		
+		& img {
+			width: 100%;
+			transition: filter .3s ease;
+			filter: invert(100%);
+			//filter: invert(100%);
+		}
+	}
+
+	&._fixed &__logo img {
+		filter: invert(0%);
+	}
+
+	&__nav {
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: var(--height-screen, 100vh);
+
+		background: var(--white);
+
+		overflow-y: auto; overflow-x: hidden;
+
+		opacity: 0; visibility: hidden;
+
+		&._mob-menu-active {
+			opacity: 1; visibility: visible;
+		}
+
+		transition: opacity .3s ease, visibility .3s ease;
+
+		@include _992 {
+			position: static;
+			width: auto; height: auto;
+			background-color: transparent;
+			padding: 0;
+			overflow: visible;
+
+			opacity: 1; visibility: visible;
+			
+		}
+
+		&--body {
+			position: relative;
+			padding: var(--height-header) 0;
+			&::before {
+				content: '';
+				position: fixed;
+				left: 0; top: 0;
+				width: 100%; height: var(--height-header);
+				background: var(--white);
+				z-index: 2;
+			}
+
+			@include _992 {
+				padding: 0;
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		& ul {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+
+			height: 100%;
+
+			@include _992 {
+				align-items: stretch;
+				flex-direction: row;
+				margin: -15px;
+			}
+		}
+
+		& li {
+			width: 100%;
+			text-align: center;
+			
+			@include _992 {
+				width: auto;
+			}
+
+		}
+
+		& a {
+			display: block;
+			width: 100%;
+			font-family: var(--title-font);
+			font-size: 1.875rem;
+			line-height: 120%;
+			color: var(--dark);
+			padding: 15px;
+
+			transition: opacity .3s ease;
+			&:hover {
+				opacity: 0.7;
+			}
+			
+			&:active {
+				opacity: 0.5;
+			}
+
+			@include _992 {
+				width: auto;
+				color: var(--black);
+			}
+
+		}
+	}
+
+	&._fixed &__nav a {
+		@include _992 {
+			color: var(--white);
+		}
+	}
+
+	&__burger {
+		position: relative;
+	
+		width: 29px; height: 21px;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%; top: 50%;
+			width: 150%; height: 150%;
+			transform: translate(-50%,-50%);
+		}
+	
+		background: transparent;
+	
+		z-index: 10;
+	
+		cursor: pointer;
+	
+		display: block;
+		@include _992 {
+			display: none;
+		}
+	
+		& span {
+			position: absolute;
+			right: 0;
+	
+			width: 100%; height: 2px;
+			background: var(--black);
+			
+			transition-duration: .3s;
+			transition-timing-function: ease;
+			transition-property: transform, top, opacity, visibility, background, width;
+	
+			&:nth-child(1) {
+				top: 0%;
+				transform: translate3d(0,0,0);
+			}
+
+			&:nth-child(2) {
+				top: 50%;
+				transform: translate3d(0, -50%, 0);
+				opacity: 1; visibility: visible;
+			}
+
+			&:nth-child(3) {
+				top: 100%;
+				width: 75%;
+				transform: translate3d(0, -100%, 0);
+			}
+		}
+
+		&._mob-menu-active span {
+			background: var(--dark);
+			&:nth-child(1) {
+				top: 50%;
+				transform: translate3d(0, -50%, 0) rotate(45deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0; visibility: hidden;
+			}
+
+			&:nth-child(3) {
+				top: 50%; width: 100%;
+				transform: translate3d(0, -50%, 0) rotate(-45deg);
+			}
+	
+		}
+	}
+
+	&._fixed &__burger span {
+		background: var(--white);
+	}
+
+	&._fixed &__burger._mob-menu-active span {
+		background: var(--black);
+	}
+}
+
+/* body._mob-menu-active .header {
+	background: #FFF;
+} */
+
+body._mob-menu-active .header__logo img {
+	filter: invert(100%) !important;
+}

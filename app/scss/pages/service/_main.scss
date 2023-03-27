@@ -1,0 +1,138 @@
+@keyframes rotateAnim {
+	to {
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}
+
+
+
+
+.service {
+
+	&__wrapper {
+		padding-bottom: 60px;
+	}
+
+	// .service__portfolio
+
+	&__portfolio {
+		margin: -5px -25px;
+		
+		@include _992 {
+			margin: -10px;
+		}
+	}
+
+	// .service__card
+
+	&__card {
+		width: calc(100% - 10px);
+		@include _550 {
+			width: calc(50% - 10px);
+		}
+		margin: 5px;
+		@include _992 {
+			width: calc(33.333% - 20px);
+			margin: 10px;
+		}
+		//position: relative;
+		
+		&--body {
+			width: 100%; position: relative;
+			padding-top: var(--aspect-ratio, 100%);
+			background: var(--light);
+			&::before {
+				content: '';
+				position: absolute;
+				left: 50%; top: 50%;
+				transform: translate(-50%,-50%);
+				width: 70px; height: 70px;
+				border-radius: 50%;
+				border: 10px solid var(--gray);
+				border-left: 10px solid transparent;
+				animation: rotateAnim 1s linear 0s infinite normal forwards;
+			}
+		}
+		&._disabled-loading-anim &--body::before {
+			animation-name: none;
+			display: none;
+		}
+		& img {
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .service__content
+
+	&__content {
+		padding-top: 50px;
+		
+		@include _992 {
+			padding-top: 100px;
+		}
+		& h2 {
+			font-family: var(--title-font);
+			font-size: 2.25rem;
+
+			@include _550 {
+				font-size: 2.5rem;
+			}
+			
+			@include _992 {
+				font-size: 3rem;
+			}
+			line-height: 100%;
+			text-transform: uppercase;
+		}
+
+		& h3 {
+			padding-top: 40px;
+
+			font-weight: 600;
+			font-size: 1.25rem;
+			line-height: 150%;
+			@include _550 {
+				font-size: 1.5rem;
+			}
+			
+			@include _992 {
+				font-size: 1.625rem;
+			}
+		}
+
+		& p {
+			font-weight: 300;
+			font-size: 1rem;
+			@include _992 {
+				font-size: 1.125rem;
+			}
+			line-height: 200%;
+
+			padding-top: 20px;
+		}
+
+		& blockquote p {
+			font-weight: 400;
+		}
+	}
+
+	&__footer {
+		padding-top: 40px; padding-bottom: 100px;
+		@include _992 {
+			padding-bottom: 170px;
+		}
+	}
+}
+
+
+
+.grid-item img {
+	opacity: 0;
+	transition: opacity .3s ease;
+	&._loaded {
+		opacity: 1;
+	}
+}

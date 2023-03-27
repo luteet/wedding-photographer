@@ -1,0 +1,170 @@
+@use 'sass:math';
+
+html, body {
+	font-size: 16px;
+	min-height: 100%;
+	min-width: 320px;
+}
+
+body {
+	font-family: var(--main-font);
+	
+	font-weight: 400;
+	line-height: 150%;
+
+	display: flex;
+	flex-direction: column;
+
+	color: var(--dark);
+
+	//padding-right: var(--popup-padding);
+
+	&._mob-menu-active {
+		overflow: hidden;
+	}
+
+	&._popup-active {
+		overflow: hidden;
+	}
+	
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+
+section {
+	position: relative;
+	z-index: 2;
+
+	
+}
+
+.wrapper {
+	//min-height: 100%;
+	flex: 1 1 auto;
+	
+	opacity: 0;
+	animation: fadeIn 0.3s ease 0.2s 1 normal forwards;
+
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+.main {
+	overflow: hidden;
+
+	flex: 1 0 auto;
+	position: relative;
+}
+
+/* .lazy {
+	opacity: 0; visibility: hidden;
+	transition: opacity .3s ease, visibility .3s ease;
+	&._loaded {
+		opacity: 1; visibility: visible;
+	}
+} */
+
+.section-end {
+	padding-bottom: 80px;
+	@include _992 {
+		padding-bottom: 167px;
+	}
+}
+
+.container {
+	padding-left: var(--container-padding);
+	padding-right: var(--container-padding);
+	
+	@include _992 {
+		padding-left: 80px;
+		padding-right: 80px;
+		&._mob {
+			padding-left: 0; padding-right: 0;
+		}
+	}
+
+	&._large {
+		@media (min-width: 1600px) {
+			padding-left: 199px; padding-right: 199px;
+		}
+	}
+}
+
+.main-padding {
+	@include _992 {
+		padding: 20px;
+	}
+
+	& > .container {
+		@include _992 {
+			padding-left: 60px;
+			padding-right: 60px;
+			&._mob {
+				padding-left: 0; padding-right: 0;
+			}
+		}
+	}
+}
+
+.section-padding {
+	padding-top: 75px;
+	padding-bottom: 75px;
+
+	@include _768 {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	@include _992 {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+
+}
+
+.btn {
+	display: inline-block;
+	text-align: center;
+	min-width: 200px;
+	
+	padding: 20px;
+
+	background: var(--dark);
+	color: var(--white);
+	
+	font-weight: 600;
+	font-size: 0.8125rem;
+	line-height: 153.846154%;
+	text-transform: uppercase;
+
+	transition: color .3s ease, background .3s ease;
+
+	&:hover {
+		background: var(--dark-hover);
+	}
+	
+	&:active {
+		background: var(--dark-active);
+	}
+}

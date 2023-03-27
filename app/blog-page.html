@@ -1,0 +1,125 @@
+@@include("html/_header.html", {
+	"class": "",
+})
+
+	<main class="main">
+		<section class="blog-page section-end">
+			<div class="blog-page__featured-image">
+				<picture>
+					<source srcset="img/blog-page/blog-page-intro.webp" type="image/webp">
+					<img src="img/blog-page/blog-page-intro.jpg" alt="" width="1920" height="900" loading="lazy">
+				</picture>
+			</div>
+			<div class="blog-page__wrapper container _large">
+				<div class="blog-page__content">
+					<div class="blog-page__content--col">
+						<h2 class="blog-page__title title">
+							Shoreditch Studios Wedding
+						</h2>
+						<b class="blog-page__event">
+							Emma + Seb`s wedding at Shoreditch Studios, London
+						</b>
+						<a href="blog.html" class="blog-page__forward">
+							< BACK TO BLOG
+						</a>
+					</div>
+					<div class="blog-page__content--col">
+						<div class="blog-page__text">
+							<p>
+								A Shoreditch Studios wedding for you on the blog today, and I have to admit, I’d been looking forward to shooting this since Emma and Seb booked me in. It’s one of those venues that is revered in the wedding photography community, as we all like to shoot at a cool London wedding venue during the wedding season, and Shoreditch Studios is most certainly right up there.
+							</p>
+							<p>
+								There’s a real warehouse vibe to it, which could be down to the fact Shoreditch Studios is housed in renovated railway arches, directly under the East London overground railway line. The venue is comprised of two high ceiling studio spaces: Studio 1 and Studio 2. Studio 1 is the main space, which is used for the ceremony and/or wedding breakfast, and has the floor to ceiling white infinity cove; perfect for displaying personalised wedding messages, or video/picture projections. There’s also a mezzanine (great for staging a live acoustic set during the ceremony/reception) and a spiral staircase, which I’ve heard has been used quite successfully for the speeches. Then there’s Studio 2 aka the party room. Similar in style to Studio 1, but a tad smaller, and perfect for moving into the evening festivities with minimal hassle.
+							</p>
+							<p>
+								There’s also a genuinely great team of suppliers, and I have to give a shout out to Andi at Halcyon Halcyon, who not only helped create that amazing floral design (along with his other-half Jayne) that you can see hovering above the speech makers, but he’s also a top guy as well! Already looking forward to the next wedding we’ve got together at Shoreditch Studios next year.
+							</p>
+						</div>
+					</div>
+					<div class="blog-page__content--col">
+						<figure class="blog-page__quote">
+							<blockquote>
+								<p>It was incredible looking through them and feeling like we were reliving the day. They captured the energy, joy and humour of our day so well. We are really so so happy with them - as are our family and friends who have subsequently been bombarded with them. I was at the Tate with a friend yesterday and had to get my phone out to go through them all with her too - there has been no escape for anyone.</p>
+							</blockquote>
+							<figcaption><cite>Emma + Seb</cite></figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="blog-page__gallery">
+					@@loop("html/_blog-gallery-item.html", [
+						{
+							"image": '1',
+							"class": '',
+						},
+						{
+							"image": '2',
+							"class": '',
+						},
+						{
+							"image": '3',
+							"class": ' _vertical-image _min',
+						},
+						{
+							"image": '4',
+							"class": ' _vertical-image _min',
+						},
+						{
+							"image": '5',
+							"class": '',
+						},
+						{
+							"image": '6',
+							"class": '',
+						},
+						{
+							"image": '7',
+							"class": ' _vertical-image _min',
+						},
+						{
+							"image": '8',
+							"class": ' _vertical-image _min',
+						},
+						{
+							"image": '6',
+							"class": '',
+						},
+						{
+							"image": '9',
+							"class": '',
+						},
+					])
+				</div>
+				<div class="blog-page__footer">
+					<div class="blog-page__share">
+						<h3>Share</h3>
+						<ul>
+							<li>
+								<a href="#" title="Share on Facebook">
+									<svg width="16" height="30" viewBox="0 0 16 30">
+										<use xlink:href="img/sprites.svg#facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" title="Share on Twitter">
+									<svg width="29" height="24" viewBox="0 0 29 24">
+										<use xlink:href="img/sprites.svg#twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" title="Share on Pinterest">
+									<svg width="26" height="32" viewBox="0 0 26 32">
+										<use xlink:href="img/sprites.svg#pinterest"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include("html/_footer-block.html")
+
+@@include("html/_footer.html")

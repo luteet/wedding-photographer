@@ -1,0 +1,151 @@
+@@include("html/_header.html", {
+	"class": "",
+})
+
+	<main class="main">
+		<section class="blog container section-end">
+			<h2 class="visually-hidden">Blog</h2>
+			<form class="blog__filter blog-filter">
+				<fieldset class="blog__filter--wrapper">
+					<span class="blog__filter--legend">CATEGORIES</span>
+					<ul class="blog__filter--list">
+						<li>
+							<label>
+								<input type="radio" name="category" value="portraiture-and-people">
+								<span>Portraiture & People</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="category" value="personal-branding">
+								<span>Personal Branding</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="category" value="business-and-corporate">
+								<span>Business & Corporate</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="category" value="lifestyle-and-advertising">
+								<span>Lifestyle & Advertising</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="category" value="events-and-reportage">
+								<span>Events & Reportage</span>
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+			<ul class="blog__list">
+				@@loop("html/_blog-item.html", [
+					{
+						"image": '1',
+						"topic": 'CHESHIRE',
+						"name": 'Sarah + Paul | Hillbark Hotel',
+					},
+					{
+						"image": '2',
+						"topic": 'WEDDINGS',
+						"name": 'Katie + Craig | Syrencot Wedding',
+					},
+					{
+						"image": '3',
+						"topic": 'SCOTLAND',
+						"name": 'Britt + Paul | Borthwick Castle',
+					},
+					{
+						"image": '4',
+						"topic": 'SCOTLAND',
+						"name": 'Gabrielle + Blair',
+					},
+					{
+						"image": '5',
+						"topic": "CASTELL D'EMPORDA",
+						"name": 'Kyra + Kyle | Castell D’emporda, Spain',
+					},
+					{
+						"image": '6',
+						"topic": 'CHESHIRE',
+						"name": 'Olivia + Jason | Combermere Abbey',
+					},
+					{
+						"image": '7',
+						"topic": 'LANCASHIRE',
+						"name": 'Sarah + Matt | West Tower',
+					},
+					{
+						"image": '8',
+						"topic": 'OUTDOOR WEDDING PHOTOGRAPHY',
+						"name": 'Megan + Tim | Cornwall',
+					},
+					{
+						"image": '9',
+						"topic": 'NORTH WALES',
+						"name": 'Ellen + Simon | Anglesey',
+					},
+					{
+						"image": '10',
+						"topic": 'MICRO WEDDINGS',
+						"name": 'Kiri + David | Cotswolds',
+					},
+				])
+			</ul>
+			<div class="blog__footer">
+				<nav class="blog__nav">
+					<a href="#" class="blog__nav--arrow _prev">
+						<svg width="8" height="31" viewBox="0 0 8 31">
+							<use xlink:href="img/sprites.svg#arrow-up"></use>
+						</svg>
+						Prev posts
+					</a>
+					<ul class="blog__nav--list">
+						<li>
+							<a href="#">
+								1
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								2
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								3
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								4
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								...
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								52
+							</a>
+						</li>
+					</ul>
+					<a href="#" class="blog__nav--arrow _next">
+						Next posts
+						<svg width="8" height="31" viewBox="0 0 8 31">
+							<use xlink:href="img/sprites.svg#arrow-up"></use>
+						</svg>
+					</a>
+				</nav>
+			</div>
+		</section>
+	</main>
+	@@include("html/_footer-block.html")
+
+@@include("html/_footer.html")

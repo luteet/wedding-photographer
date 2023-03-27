@@ -1,0 +1,20 @@
+@import 'mixin';
+@import 'libs';
+@import 'null';
+@import 'vars';
+@import 'global';
+@import 'font';
+//@import 'popup';
+
+@import 'main-sections/header';
+
+
+@import 'pages/index/start';
+@import 'pages/service/main';
+@import 'pages/blog/main';
+@import 'pages/blog-page/main';
+@import 'pages/about/main';
+@import 'pages/contacts/main';
+
+
+@import 'main-sections/footer';

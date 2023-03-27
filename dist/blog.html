@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Logo" width="306" height="27" loading="lazy">
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul>
+						<li>
+							<a href="index.html">
+								Portfolio
+							</a>
+						</li>
+						<li>
+							<a href="blog.html">
+								Blog
+							</a>
+						</li>
+						<li>
+							<a href="about.html">
+								About
+							</a>
+						</li>
+						<li>
+							<a href="contacts.html">
+								Contacts
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<button class="header__burger" type="button" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</header>
+
+	<main class="main">
+		<section class="blog container section-end">
+			<h2 class="visually-hidden">Blog</h2>
+			<form class="blog__filter blog-filter">
+				<fieldset class="blog__filter--wrapper">
+					<span class="blog__filter--legend">CATEGORIES</span>
+					<ul class="blog__filter--list">
+						<li>
+							<label>
+								<input type="radio" name="category" value="portraiture-and-people">
+								<span>Portraiture & People</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="category" value="personal-branding">
+								<span>Personal Branding</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="category" value="business-and-corporate">
+								<span>Business & Corporate</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="category" value="lifestyle-and-advertising">
+								<span>Lifestyle & Advertising</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" name="category" value="events-and-reportage">
+								<span>Events & Reportage</span>
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
+			<ul class="blog__list">
+				<li>
+    <a href="blog-page.html" class="blog__item" aria-label="Sarah + Paul | Hillbark Hotel">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-1.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-1.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            CHESHIRE
+        </span>
+        <h3 class="blog__item--name">
+            Sarah + Paul | Hillbark Hotel
+        </h3>
+    </a>
+</li><li>
+    <a href="blog-page.html" class="blog__item" aria-label="Katie + Craig | Syrencot Wedding">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-2.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-2.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            WEDDINGS
+        </span>
+        <h3 class="blog__item--name">
+            Katie + Craig | Syrencot Wedding
+        </h3>
+    </a>
+</li><li>
+    <a href="blog-page.html" class="blog__item" aria-label="Britt + Paul | Borthwick Castle">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-3.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-3.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            SCOTLAND
+        </span>
+        <h3 class="blog__item--name">
+            Britt + Paul | Borthwick Castle
+        </h3>
+    </a>
+</li><li>
+    <a href="blog-page.html" class="blog__item" aria-label="Gabrielle + Blair">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-4.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-4.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            SCOTLAND
+        </span>
+        <h3 class="blog__item--name">
+            Gabrielle + Blair
+        </h3>
+    </a>
+</li><li>
+    <a href="blog-page.html" class="blog__item" aria-label="Kyra + Kyle | Castell D’emporda, Spain">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-5.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-5.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            CASTELL D'EMPORDA
+        </span>
+        <h3 class="blog__item--name">
+            Kyra + Kyle | Castell D’emporda, Spain
+        </h3>
+    </a>
+</li><li>
+    <a href="blog-page.html" class="blog__item" aria-label="Olivia + Jason | Combermere Abbey">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-6.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-6.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            CHESHIRE
+        </span>
+        <h3 class="blog__item--name">
+            Olivia + Jason | Combermere Abbey
+        </h3>
+    </a>
+</li><li>
+    <a href="blog-page.html" class="blog__item" aria-label="Sarah + Matt | West Tower">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-7.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-7.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            LANCASHIRE
+        </span>
+        <h3 class="blog__item--name">
+            Sarah + Matt | West Tower
+        </h3>
+    </a>
+</li><li>
+    <a href="blog-page.html" class="blog__item" aria-label="Megan + Tim | Cornwall">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-8.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-8.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            OUTDOOR WEDDING PHOTOGRAPHY
+        </span>
+        <h3 class="blog__item--name">
+            Megan + Tim | Cornwall
+        </h3>
+    </a>
+</li><li>
+    <a href="blog-page.html" class="blog__item" aria-label="Ellen + Simon | Anglesey">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-9.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-9.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            NORTH WALES
+        </span>
+        <h3 class="blog__item--name">
+            Ellen + Simon | Anglesey
+        </h3>
+    </a>
+</li><li>
+    <a href="blog-page.html" class="blog__item" aria-label="Kiri + David | Cotswolds">
+        <div class="blog__item--image">
+            <picture>
+                <source srcset="img/blog-list/blog-list-image-10.webp" type="image/webp">
+                <img src="img/blog-list/blog-list-image-10.jpg" alt="" width="865" height="540" loading="lazy">
+            </picture>
+        </div>
+        <span class="blog__item--topic">
+            MICRO WEDDINGS
+        </span>
+        <h3 class="blog__item--name">
+            Kiri + David | Cotswolds
+        </h3>
+    </a>
+</li>
+			</ul>
+			<div class="blog__footer">
+				<nav class="blog__nav">
+					<a href="#" class="blog__nav--arrow _prev">
+						<svg width="8" height="31" viewBox="0 0 8 31">
+							<use xlink:href="img/sprites.svg#arrow-up"></use>
+						</svg>
+						Prev posts
+					</a>
+					<ul class="blog__nav--list">
+						<li>
+							<a href="#">
+								1
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								2
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								3
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								4
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								...
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								52
+							</a>
+						</li>
+					</ul>
+					<a href="#" class="blog__nav--arrow _next">
+						Next posts
+						<svg width="8" height="31" viewBox="0 0 8 31">
+							<use xlink:href="img/sprites.svg#arrow-up"></use>
+						</svg>
+					</a>
+				</nav>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+	<div class="footer__wrapper">
+		<div class="footer__copy">COPYRIGHTS © LIAM + BEE 2022 | ALL RIGHTS RESERVED</div>
+		<a href="#" class="footer__to-up btn-to-scroll">
+			BACK TO TOP
+			<svg width="8" height="31" viewBox="0 0 8 31">
+				<use xlink:href="img/sprites.svg#arrow-up"></use>
+			</svg>
+		</a>
+	</div>
+</footer>
+
+		
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>
