@@ -58,6 +58,7 @@
 			width: 100%;
 			transition: filter .3s ease;
 			filter: invert(100%);
+			user-select: none;
 			//filter: invert(100%);
 		}
 	}

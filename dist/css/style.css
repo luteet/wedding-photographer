@@ -11,6 +11,14 @@ progress,sub,sup {
     padding: 0
 }
 
+.swiper-vertical>.swiper-wrapper,body {
+    flex-direction: column
+}
+
+.header__burger::before,.header__nav--body::before,.service__card--body::before,.start__bg::after,.swiper-centered>.swiper-wrapper::before,.swiper-cube .swiper-cube-shadow:before,.swiper-virtual.swiper-css-mode .swiper-wrapper::after {
+    content: ""
+}
+
 .blog__filter,.blog__item,.btn,.footer__copy,.header__nav li,.swiper-pagination,.swiper-zoom-container,.txt-center {
     text-align: center
 }
@@ -161,10 +169,6 @@ summary {
     display: block
 }
 
-.swiper-vertical>.swiper-wrapper {
-    flex-direction: column
-}
-
 .swiper-wrapper {
     position: relative;
     width: 100%;
@@ -303,7 +307,6 @@ summary {
 }
 
 .swiper-centered>.swiper-wrapper::before {
-    content: "";
     flex-shrink: 0;
     order: 9999
 }
@@ -400,7 +403,6 @@ summary {
 }
 
 .swiper-virtual.swiper-css-mode .swiper-wrapper::after {
-    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -472,10 +474,6 @@ summary {
 
 .swiper-button-next:after,.swiper-rtl .swiper-button-prev:after {
     content: "next"
-}
-
-.header__burger::before,.header__nav--body::before,.service__card--body::before,.start__bg::after,.swiper-cube .swiper-cube-shadow:before {
-    content: ""
 }
 
 .swiper-pagination {
@@ -705,11 +703,6 @@ button.swiper-pagination-bullet {
     top: 0
 }
 
-*,.visually-hidden {
-    border: 0;
-    padding: 0
-}
-
 .swiper-scrollbar-cursor-drag {
     cursor: move
 }
@@ -873,7 +866,9 @@ button.swiper-pagination-bullet {
 }
 
 * {
-    margin: 0
+    padding: 0;
+    margin: 0;
+    border: 0
 }
 
 *,:after,:before {
@@ -983,8 +978,7 @@ body {
     font-family: var(--main-font);
     font-weight: 400;
     line-height: 150%;
-    display: flex;
-    flex-direction: column
+    display: flex
 }
 
 body._mob-menu-active,body._popup-active {
@@ -1008,6 +1002,8 @@ body._mob-menu-active,body._popup-active {
     width: 1px;
     height: 1px;
     margin: -1px;
+    border: 0;
+    padding: 0;
     white-space: nowrap;
     -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
@@ -1147,7 +1143,10 @@ section {
     transition: filter .3s ease;
     transition: filter .3s ease,-webkit-filter .3s ease;
     -webkit-filter: invert(100%);
-    filter: invert(100%)
+    filter: invert(100%);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 }
 
 .header._fixed .header__logo img {
@@ -1850,7 +1849,8 @@ body._mob-menu-active .header__logo img {
 }
 
 .about__content {
-    padding-top: 80px
+    padding-top: 80px;
+    margin-top: -15px
 }
 
 .about__content p {
