@@ -1633,7 +1633,7 @@ body._mob-menu-active .header__logo img {
 .blog__item--topic {
     font-size: 1.25rem;
     line-height: 150%;
-    color: var(--gray);
+    color: #909090;
     display: block;
     margin-top: 30px;
     font-weight: 500
@@ -2354,8 +2354,8 @@ body._mob-menu-active .header__logo img {
     }
 
     .container {
-        padding-left: 60px;
-        padding-right: 60px
+        padding-left: 80px;
+        padding-right: 80px
     }
 
     .container._mob {
@@ -2367,12 +2367,12 @@ body._mob-menu-active .header__logo img {
         padding: 20px
     }
 
-    .main-padding>.container {
+    .main-padding .container {
         padding-left: 60px;
         padding-right: 60px
     }
 
-    .main-padding>.container._mob {
+    .main-padding .container._mob {
         padding-left: 0;
         padding-right: 0
     }
