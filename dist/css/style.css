@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */button,hr,input {
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */.swiper-cube,.swiper-flip,button,hr,input {
     overflow: visible
 }
 
@@ -13,10 +13,6 @@ progress,sub,sup {
 
 .swiper-vertical>.swiper-wrapper,body {
     flex-direction: column
-}
-
-.header__burger::before,.header__nav--body::before,.service__card--body::before,.start__bg::after,.swiper-centered>.swiper-wrapper::before,.swiper-cube .swiper-cube-shadow:before,.swiper-virtual.swiper-css-mode .swiper-wrapper::after {
-    content: ""
 }
 
 .blog__filter,.blog__item,.btn,.footer__copy,.header__nav li,.swiper-pagination,.swiper-zoom-container,.txt-center {
@@ -206,10 +202,6 @@ summary {
     display: block
 }
 
-.swiper-button-lock,.swiper-pagination-lock {
-    display: none
-}
-
 .swiper-slide-invisible-blank {
     visibility: hidden
 }
@@ -307,6 +299,7 @@ summary {
 }
 
 .swiper-centered>.swiper-wrapper::before {
+    content: "";
     flex-shrink: 0;
     order: 9999
 }
@@ -403,6 +396,7 @@ summary {
 }
 
 .swiper-virtual.swiper-css-mode .swiper-wrapper::after {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -458,6 +452,10 @@ summary {
     line-height: 1
 }
 
+.blog-page__forward,.blog-page__share h3,.blog__filter--legend,.blog__nav--arrow,.btn,.contact__content h2,.footer__to-up,.service__content h2,.start__nav a {
+    text-transform: uppercase
+}
+
 .swiper-button-prev,.swiper-rtl .swiper-button-next {
     left: var(--swiper-navigation-sides-offset,10px);
     right: auto
@@ -474,6 +472,14 @@ summary {
 
 .swiper-button-next:after,.swiper-rtl .swiper-button-prev:after {
     content: "next"
+}
+
+.header__burger::before,.header__nav--body::before,.service__card--body::before,.start__bg::after,.swiper-cube .swiper-cube-shadow:before {
+    content: ""
+}
+
+.swiper-button-lock {
+    display: none
 }
 
 .swiper-pagination {
@@ -501,10 +507,6 @@ summary {
 .swiper-pagination-bullets-dynamic {
     overflow: hidden;
     font-size: 0
-}
-
-.swiper-cube,.swiper-flip {
-    overflow: visible
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
@@ -660,6 +662,10 @@ button.swiper-pagination-bullet {
     height: 100%;
     left: 0;
     top: 0
+}
+
+.swiper-pagination-lock {
+    display: none
 }
 
 .swiper-scrollbar {
@@ -1011,7 +1017,7 @@ body._mob-menu-active,body._popup-active {
     overflow: hidden
 }
 
-.main,section {
+.main,.nav-section,section {
     position: relative
 }
 
@@ -1056,7 +1062,6 @@ section {
     font-weight: 600;
     font-size: .8125rem;
     line-height: 153.846154%;
-    text-transform: uppercase;
     transition: color .3s ease,background .3s ease
 }
 
@@ -1066,6 +1071,23 @@ section {
 
 .btn:active {
     background: var(--dark-active)
+}
+
+.nav-section .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0)
+}
+
+.header,.nav-section .header__burger span {
+    background: var(--white)
+}
+
+.nav-section .header__logo img {
+    -webkit-filter: none;
+    filter: none
 }
 
 .main-title {
@@ -1099,7 +1121,6 @@ section {
     padding-bottom: 25px;
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
-    background: var(--white);
     transition: opacity .3s ease,visibility .3s ease;
     opacity: 1;
     z-index: 99;
@@ -1115,6 +1136,7 @@ section {
 }
 
 .header__nav,.header__nav--body::before {
+    left: 0;
     top: 0;
     background: var(--white);
     width: 100%
@@ -1131,14 +1153,15 @@ section {
 }
 
 .header__logo {
-    max-width: 205px;
+    display: flex;
+    align-items: center;
     position: relative;
     z-index: 3;
     transform: translate3d(0,0,0)
 }
 
 .header__logo img {
-    width: 100%;
+    max-width: 100%;
     transition: -webkit-filter .3s ease;
     transition: filter .3s ease;
     transition: filter .3s ease,-webkit-filter .3s ease;
@@ -1149,6 +1172,10 @@ section {
     user-select: none
 }
 
+.header__logo img:nth-child(1) {
+    display: none
+}
+
 .header._fixed .header__logo img {
     -webkit-filter: invert(0);
     filter: invert(0)
@@ -1156,12 +1183,12 @@ section {
 
 .header__nav {
     position: absolute;
-    left: 0;
     height: var(--height-screen,100vh);
     overflow-y: auto;
     overflow-x: hidden;
     opacity: 0;
     visibility: hidden;
+    display: flex;
     transition: opacity .3s ease,visibility .3s ease
 }
 
@@ -1176,12 +1203,12 @@ section {
 
 .header__nav--body {
     position: relative;
-    padding: var(--height-header) 0
+    padding: var(--height-header) 0;
+    margin: auto
 }
 
 .header__nav--body::before {
     position: fixed;
-    left: 0;
     height: var(--height-header);
     z-index: 2
 }
@@ -1359,7 +1386,6 @@ body._mob-menu-active .header__logo img {
     display: block;
     font-size: 1.75rem;
     line-height: 128.571429%;
-    text-transform: uppercase;
     color: var(--gray);
     transition: color .3s ease
 }
@@ -1440,8 +1466,7 @@ body._mob-menu-active .header__logo img {
 .service__content h2 {
     font-family: var(--title-font);
     font-size: 2.25rem;
-    line-height: 100%;
-    text-transform: uppercase
+    line-height: 100%
 }
 
 .service__content h3 {
@@ -1488,8 +1513,7 @@ body._mob-menu-active .header__logo img {
 
 .blog__filter--legend {
     font-size: 1.25rem;
-    line-height: 125%;
-    text-transform: uppercase
+    line-height: 125%
 }
 
 .blog__filter--list {
@@ -1612,7 +1636,6 @@ body._mob-menu-active .header__logo img {
 .blog__nav--arrow {
     display: flex;
     align-items: center;
-    text-transform: uppercase;
     font-weight: 500;
     font-size: 1rem;
     line-height: 115.384615%;
@@ -1715,7 +1738,6 @@ body._mob-menu-active .header__logo img {
 
 .blog-page__forward {
     display: inline-block;
-    text-transform: uppercase;
     color: var(--gray);
     margin-top: 20px
 }
@@ -1813,7 +1835,6 @@ body._mob-menu-active .header__logo img {
 
 .blog-page__share h3 {
     padding-right: 29px;
-    text-transform: uppercase;
     font-weight: 500;
     font-size: 1.625rem;
     line-height: 115.384615%
@@ -1915,8 +1936,7 @@ body._mob-menu-active .header__logo img {
 .contact__content h2 {
     font-family: var(--title-font);
     font-size: 2.25rem;
-    line-height: 100%;
-    text-transform: uppercase
+    line-height: 100%
 }
 
 .contact__content p {
@@ -2133,8 +2153,7 @@ body._mob-menu-active .header__logo img {
 .footer__to-up {
     display: flex;
     align-items: center;
-    color: var(--dark);
-    text-transform: uppercase
+    color: var(--dark)
 }
 
 .footer__to-up svg {
@@ -2198,10 +2217,6 @@ body._mob-menu-active .header__logo img {
         font-size: 2.5rem
     }
 
-    .header__logo {
-        max-width: 306px
-    }
-
     .start__nav a {
         line-height: 115%;
         font-size: 3.5rem
@@ -2233,10 +2248,6 @@ body._mob-menu-active .header__logo img {
 }
 
 @media (min-width:992px) {
-    .header__burger,.header__nav--body::before {
-        display: none
-    }
-
     .section-end {
         padding-bottom: 167px
     }
@@ -2270,6 +2281,10 @@ body._mob-menu-active .header__logo img {
         padding-bottom: 150px
     }
 
+    .nav-section .header__nav a {
+        color: var(--white)
+    }
+
     .main-title {
         font-size: 3.125rem
     }
@@ -2291,11 +2306,17 @@ body._mob-menu-active .header__logo img {
         padding: 0;
         overflow: visible;
         opacity: 1;
-        visibility: visible
+        visibility: visible;
+        display: block
+    }
+
+    .header__burger,.header__nav--body::before {
+        display: none
     }
 
     .header__nav--body {
-        padding: 0
+        padding: 0;
+        margin: 0
     }
 
     .header__nav ul {
@@ -2522,6 +2543,14 @@ body._mob-menu-active .header__logo img {
 }
 
 @media (min-width:1440px) {
+    .header__logo img:nth-child(1) {
+        display: block
+    }
+
+    .header__logo img:nth-child(2) {
+        display: none
+    }
+
     .blog-page__text {
         padding-left: 40px;
         padding-right: 58px

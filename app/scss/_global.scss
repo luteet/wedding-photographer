@@ -168,3 +168,31 @@ section {
 		background: var(--dark-active);
 	}
 }
+
+.nav-section {
+	position: relative;
+}
+
+.nav-section .header {
+	position: absolute;
+	left: 0; top: 0;
+	width: 100%;
+	background: transparent;
+
+	&__logo img {
+		filter: none;
+		@include _992 {
+
+		}
+	}
+
+	&__nav a {
+		@include _992 {
+			color: var(--white);
+		}
+	}
+
+	&__burger span {
+		background: var(--white);
+	}
+}

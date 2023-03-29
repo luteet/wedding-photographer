@@ -77,43 +77,71 @@ window.onresize = resize;
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
+const startBg = document.querySelector('.start__bg');
+if(startBg) {
+	let sliderstartBg = new Swiper('.start__bg', {
 
-let sliderstartBg = new Swiper('.start__bg', {
+		spaceBetween: 0,
+		slidesPerView: 1,
 
-	spaceBetween: 0,
-	slidesPerView: 1,
+		autoplay: {
+			delay: 2000,
+			waitForTransition: false,
+		},
+	
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: false
+		},
 
-	effect: 'fade',
-	fadeEffect: {
-		crossFade: false
-	},
-
-});
-
-const startNavLink = document.querySelectorAll('.start__nav a');
-
-startNavLink.forEach((startNavLink, index) => {
-
-	startNavLink.dataset.index = index;
-	if(index == 0) startNavLink.classList.add('_active')
-
-	startNavLink.addEventListener('mouseenter', function () {
 		
-		const activeStartNavLink = document.querySelectorAll('.start__nav a._active');
-		activeStartNavLink.forEach(activeStartNavLink => {
-			activeStartNavLink.classList.remove('_active');
-		})
-
-		startNavLink.classList.add('_active');
-
-		const linkIndex = Number(startNavLink.dataset.index);
-		if(typeof linkIndex == "number") {
-			sliderstartBg.slideTo(linkIndex,300);
-		}
-		
+	
+	});
+	
+	const startNavLink = document.querySelectorAll('.start__nav a');
+	startNavLink.forEach((startNavLink, index) => {
+		if(index == sliderstartBg.activeIndex) startNavLink.classList.add('_active');
 	})
 
-})
+	sliderstartBg.on('slideChangeTransitionEnd', function () {
+		sliderstartBg.autoplay.start();
+	});
+
+	sliderstartBg.on('slideChangeTransitionStart', function () {
+		startNavLink.forEach((startNavLink, index) => {
+			startNavLink.classList.remove('_active');
+		})
+		startNavLink.forEach((startNavLink, index) => {
+			if(index == sliderstartBg.activeIndex) startNavLink.classList.add('_active');
+		})
+	});
+	
+	startNavLink.forEach((startNavLink, index) => {
+	
+		startNavLink.dataset.index = index;
+		//if(index == 0) startNavLink.classList.add('_active')
+	
+		startNavLink.addEventListener('mouseenter', function () {
+			
+			/* const activeStartNavLink = document.querySelectorAll('.start__nav a._active');
+			activeStartNavLink.forEach(activeStartNavLink => {
+				activeStartNavLink.classList.remove('_active');
+			})
+	
+			startNavLink.classList.add('_active'); */
+	
+			const linkIndex = Number(startNavLink.dataset.index);
+			if(typeof linkIndex == "number") {
+				sliderstartBg.autoplay.stop()
+				sliderstartBg.slideTo(linkIndex,300);
+			}
+			
+		})
+	
+	})
+}
+
+
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
