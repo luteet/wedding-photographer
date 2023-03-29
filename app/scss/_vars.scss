@@ -23,6 +23,10 @@ $container: 1440;
 }
 
 @font-face {
+	@include font-include('Syne', 600, swap, normal, 'Syne-SemiBold');
+}
+
+@font-face {
 	@include font-include('Poppins', 300, swap, normal, 'Poppins-Light');
 }
 
@@ -36,4 +40,12 @@ $container: 1440;
 
 @font-face {
 	@include font-include('Poppins', 600, swap, normal, 'Poppins-SemiBold');
+}
+
+@font-face {
+	@include font-include('Inter', 500, swap, normal, 'Inter-Medium');
+}
+
+@font-face {
+	@include font-include('Inter', 600, swap, normal, 'Inter-SemiBold');
 }

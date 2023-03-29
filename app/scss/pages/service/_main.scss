@@ -75,6 +75,7 @@
 		}
 		& h2 {
 			font-family: var(--title-font);
+			font-weight: 600;
 			font-size: 2.25rem;
 
 			@include _550 {
@@ -91,15 +92,20 @@
 		& h3 {
 			padding-top: 40px;
 
+			font-family: var(--title-font);
 			font-weight: 600;
 			font-size: 1.25rem;
-			line-height: 150%;
+			line-height: 120%;
 			@include _550 {
 				font-size: 1.5rem;
 			}
+
+			@include _768 {
+				font-size: 2rem;
+			}
 			
 			@include _992 {
-				font-size: 1.625rem;
+				font-size: 2.25rem;
 			}
 		}
 
@@ -115,7 +121,22 @@
 		}
 
 		& blockquote p {
-			font-weight: 400;
+			font-weight: 500;
+			font-size: 1rem;
+
+			@include _550 {
+				font-size: 1.175rem;
+			}
+
+			@include _768 {
+				font-size: 1.25rem;
+			}
+			
+			@include _992 {
+				font-size: 1.375rem;
+			}
+			
+			line-height: 150%;
 		}
 	}
 

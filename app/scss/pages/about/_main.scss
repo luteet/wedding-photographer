@@ -5,12 +5,13 @@
 	
 	@include _992 {
 		display: grid;
-		grid-template-columns: auto 45%;
+		grid-template-columns: auto 40%;
 	}
 
 	// .about__col
 
 	&__col {
+		
 		&:last-child {
 			margin: 0 -20px;
 			@include _992 {
@@ -27,7 +28,7 @@
 			padding-top: 0; padding-right: 40px;
 		}
 		@media (min-width: 1440px) {
-			padding-right: 115px;
+			padding-right: 145px;
 		}
 
 		margin-top: -15px;
@@ -43,7 +44,11 @@
 		& h3 {
 			margin-top: 40px;
 
-			font-size: 1.625rem;
+			font-size: 1.5rem;
+			@include _992 {
+				font-size: 1.625rem;
+				font-weight: 500;
+			}
 			line-height: 115.384615%;
 			font-weight: 600;
 		}
@@ -51,6 +56,8 @@
 		& a {
 			color: var(--dark);
 			font-weight: 300;
+			font-size: 1.125rem;
+			line-height: 200%;
 		}
 
 		& li {
@@ -68,7 +75,7 @@
 	// .about__image
 
 	&__image {
-		width: 100%; padding-top: 135.897436%;
+		width: 100%; padding-top: 142.45614%;
 		position: relative;
 		
 		& img {
