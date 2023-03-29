@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */button,hr,input {
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */.swiper-cube,.swiper-flip,button,hr,input {
     overflow: visible
 }
 
@@ -13,6 +13,10 @@ progress,sub,sup {
 
 .header__burger::before,.header__nav--body::before,.service__card--body::before,.start__bg::after,.swiper-centered>.swiper-wrapper::before,.swiper-cube .swiper-cube-shadow:before,.swiper-virtual.swiper-css-mode .swiper-wrapper::after {
     content: ""
+}
+
+.blog__filter,.blog__item,.btn,.footer__copy,.header__nav li,.swiper-pagination,.swiper-zoom-container,.txt-center {
+    text-align: center
 }
 
 body {
@@ -474,7 +478,6 @@ summary {
 
 .swiper-pagination {
     position: absolute;
-    text-align: center;
     transition: .3s opacity;
     transform: translate3d(0,0,0);
     z-index: 10
@@ -498,10 +501,6 @@ summary {
 .swiper-pagination-bullets-dynamic {
     overflow: hidden;
     font-size: 0
-}
-
-.swiper-cube,.swiper-flip {
-    overflow: visible
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
@@ -700,6 +699,11 @@ button.swiper-pagination-bullet {
     top: 0
 }
 
+*,.visually-hidden {
+    border: 0;
+    padding: 0
+}
+
 .swiper-scrollbar-cursor-drag {
     cursor: move
 }
@@ -713,8 +717,7 @@ button.swiper-pagination-bullet {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center
+    align-items: center
 }
 
 .swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg {
@@ -864,9 +867,7 @@ button.swiper-pagination-bullet {
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    border: 0
+    margin: 0
 }
 
 *,:after,:before {
@@ -1021,8 +1022,6 @@ body._mob-menu-active,body._popup-active {
     width: 1px;
     height: 1px;
     margin: -1px;
-    border: 0;
-    padding: 0;
     white-space: nowrap;
     -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
@@ -1068,7 +1067,6 @@ section {
 
 .btn {
     display: inline-block;
-    text-align: center;
     min-width: 200px;
     padding: 20px;
     background: var(--dark);
@@ -1096,7 +1094,7 @@ section {
     background: rgba(0,0,0,0)
 }
 
-.header,.nav-section .header__burger span {
+.header,.header__nav,.header__nav--body::before,.nav-section .header__burger span {
     background: var(--white)
 }
 
@@ -1112,7 +1110,7 @@ section {
     font-size: 1.875rem
 }
 
-.header__nav a,.service__content h2,.start__nav a,.title {
+.header__nav a,.service__content h1,.start__nav a,.title {
     font-weight: 400;
     font-family: var(--title-font)
 }
@@ -1126,10 +1124,6 @@ section {
 .section-title {
     font-family: var(--title-font);
     font-weight: 700
-}
-
-.txt-center {
-    text-align: center
 }
 
 .header {
@@ -1152,13 +1146,6 @@ section {
 .header._fixed {
     position: fixed;
     background: rgba(0,0,0,0)
-}
-
-.header__nav,.header__nav--body::before {
-    top: 0;
-    background: var(--white);
-    width: 100%;
-    left: 0
 }
 
 .header._always-hide,.header._hide {
@@ -1201,6 +1188,9 @@ section {
 
 .header__nav {
     position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: var(--height-screen,100vh);
     overflow-y: auto;
     overflow-x: hidden;
@@ -1208,10 +1198,6 @@ section {
     visibility: hidden;
     display: flex;
     transition: opacity .3s ease,visibility .3s ease
-}
-
-.blog-page__share ul a,.blog__item--name,.blog__nav--arrow,.blog__nav--list a,.grid-item img,.header__nav a {
-    transition: opacity .3s ease
 }
 
 .header__nav._mob-menu-active {
@@ -1227,6 +1213,9 @@ section {
 
 .header__nav--body::before {
     position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: var(--height-header);
     z-index: 2
 }
@@ -1240,8 +1229,7 @@ section {
 }
 
 .header__nav li {
-    width: 100%;
-    text-align: center
+    width: 100%
 }
 
 .header__nav a {
@@ -1250,7 +1238,8 @@ section {
     font-size: 1.875rem;
     line-height: 120%;
     color: var(--dark);
-    padding: 15px
+    padding: 15px;
+    transition: opacity .3s ease
 }
 
 .header__nav a:hover {
@@ -1337,12 +1326,6 @@ section {
     transform: translate3d(0,-50%,0) rotate(-45deg)
 }
 
-.start__bg,.start__bg--slide img,.start__bg::after {
-    top: 0;
-    width: 100%;
-    height: 100%
-}
-
 .header._fixed .header__burger span {
     background: var(--white)
 }
@@ -1367,6 +1350,9 @@ body._mob-menu-active .header__logo img {
 .start__bg {
     position: absolute;
     left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -1378,6 +1364,9 @@ body._mob-menu-active .header__logo img {
 .start__bg::after {
     position: absolute;
     left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background: var(--dark);
     opacity: .1;
     z-index: 2
@@ -1391,6 +1380,9 @@ body._mob-menu-active .header__logo img {
 .start__bg--slide img {
     position: absolute;
     left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     pointer-events: none
@@ -1408,6 +1400,10 @@ body._mob-menu-active .header__logo img {
     text-transform: uppercase;
     color: var(--gray);
     transition: color .3s ease
+}
+
+.blog-page__share ul a,.blog__item--name,.blog__nav--arrow,.blog__nav--list a,.grid-item img {
+    transition: opacity .3s ease
 }
 
 .start__nav a._active {
@@ -1483,13 +1479,13 @@ body._mob-menu-active .header__logo img {
     padding-top: 20px
 }
 
-.service__content h2 {
+.service__content h1 {
     font-size: 2.25rem;
     line-height: 133.333333%;
     text-transform: uppercase
 }
 
-.service__content h3 {
+.service__content h2 {
     padding-top: 30px;
     font-family: var(--title-font);
     font-weight: 600;
@@ -1525,8 +1521,7 @@ body._mob-menu-active .header__logo img {
 }
 
 .blog__filter {
-    padding: 30px 0;
-    text-align: center
+    padding: 30px 0
 }
 
 .blog__filter--wrapper {
@@ -1603,7 +1598,6 @@ body._mob-menu-active .header__logo img {
 }
 
 .blog__item {
-    text-align: center;
     color: var(--dark);
     display: block
 }
@@ -1919,13 +1913,13 @@ body._mob-menu-active .header__logo img {
 }
 
 .about__content p {
-    padding-top: 10px;
+    padding-top: 9px;
     font-size: 1.125rem;
     line-height: 200%;
     font-weight: 300
 }
 
-.about__content h3 {
+.about__content h2 {
     margin-top: 58px;
     font-size: 1.5rem;
     line-height: 115.384615%;
@@ -1949,7 +1943,7 @@ body._mob-menu-active .header__logo img {
 }
 
 .about__btn {
-    margin-top: 40px
+    margin-top: 45px
 }
 
 .about__image {
@@ -2209,8 +2203,7 @@ body._mob-menu-active .header__logo img {
 }
 
 .footer__copy {
-    flex: 1 1 100%;
-    text-align: center
+    flex: 1 1 100%
 }
 
 .footer__to-up {
@@ -2231,7 +2224,7 @@ body._mob-menu-active .header__logo img {
 }
 
 @media (min-width:550px) {
-    .service__content h2,.title {
+    .service__content h1,.title {
         font-size: 2.5rem
     }
 
@@ -2243,7 +2236,7 @@ body._mob-menu-active .header__logo img {
         width: calc(50% - 10px)
     }
 
-    .service__content h3 {
+    .service__content h2 {
         font-size: 1.5rem
     }
 
@@ -2300,12 +2293,12 @@ body._mob-menu-active .header__logo img {
         padding-top: 50px
     }
 
-    .service__content h2 {
+    .service__content h1 {
         line-height: 100%;
         font-weight: 600
     }
 
-    .service__content h3 {
+    .service__content h2 {
         font-size: 2rem;
         line-height: 100%;
         padding-top: 40px
@@ -2466,11 +2459,11 @@ body._mob-menu-active .header__logo img {
         margin-right: -30px
     }
 
-    .service__content h2 {
+    .service__content h1 {
         font-size: 3rem
     }
 
-    .service__content h3 {
+    .service__content h2 {
         font-size: 2.25rem
     }
 
@@ -2601,7 +2594,7 @@ body._mob-menu-active .header__logo img {
 
     .about {
         display: grid;
-        grid-template-columns: auto 32.387%
+        grid-template-columns: auto 38.807%
     }
 
     .about__col:last-child {
@@ -2613,7 +2606,7 @@ body._mob-menu-active .header__logo img {
         padding-right: 40px
     }
 
-    .about__content h3 {
+    .about__content h2 {
         font-size: 1.625rem;
         font-weight: 500;
         margin-top: 40px
@@ -2702,8 +2695,12 @@ body._mob-menu-active .header__logo img {
         padding-right: 58px
     }
 
+    .about__col:last-child {
+        padding-right: 113px
+    }
+
     .about__content {
-        padding-right: 18%
+        padding-right: 17%
     }
 }
 
@@ -2711,6 +2708,11 @@ body._mob-menu-active .header__logo img {
     .container._large {
         padding-left: 199px;
         padding-right: 199px
+    }
+
+    .about__image {
+        width: 570px;
+        padding-top: 812px
     }
 }
 

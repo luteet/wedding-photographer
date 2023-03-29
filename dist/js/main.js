@@ -93,8 +93,6 @@ if(startBg) {
 		fadeEffect: {
 			crossFade: false
 		},
-
-		
 	
 	});
 	
