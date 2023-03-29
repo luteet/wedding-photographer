@@ -208,6 +208,20 @@ if(gridBlock) {
 
 
 
+
+
+
+
+const blogFilter = document.querySelectorAll('.blog-filter');
+blogFilter.forEach(blogFilter => {
+	const inputs = blogFilter.querySelectorAll('input[type="radio"]');
+	inputs.forEach(input => {
+		input.addEventListener('change', function () {
+			blogFilter.submit();
+		})
+	})
+})
+
 function headerScroll(arg) {
 
 	function getCoords(elem) {
@@ -304,26 +318,3 @@ function headerScroll(arg) {
 
 headerScroll();
 
-
-
-
-const blogFilter = document.querySelectorAll('.blog-filter');
-blogFilter.forEach(blogFilter => {
-	const inputs = blogFilter.querySelectorAll('input[type="radio"]');
-	inputs.forEach(input => {
-		input.addEventListener('change', function () {
-			blogFilter.submit();
-		})
-	})
-})
-
-/* 
-// =-=-=-=-=-=-=-=-=-=-=-=- <animation> -=-=-=-=-=-=-=-=-=-=-=-=
-
-AOS.init({
-	disable: "mobile",
-});
-
-// =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
-
- */
