@@ -1,24 +1,35 @@
 .contact {
 
-	
+	flex: 1 1 auto;
 
-	padding-top: 30px;
+	padding-top: 30px; padding-bottom: 80px;
 
 	@include _992 {
-		padding-top: 50px;
+		padding-top: 30px;
 	}
 
 	&__row {
-		display: grid;
-		grid-template-columns: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
 		@include _768 {
-			grid-template-columns: 1fr 1fr;
+			display: grid;
+			grid-template-columns: 49.3% 50%;
+			justify-content: stretch;
+			& > * {
+				align-self: center;
+			}
 		}
 
 		@include _992 {
 			padding-left: calc(50% - 480px);
 			padding-right: calc(50% - 1064px);
 		}
+		
+
+		min-height: 100%;
+		
 	}
 
 	// .contact__col
@@ -27,25 +38,33 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		
+
+		/* &:last-child {
+			justify-self: start;
+		} */
 	}
 
 	// .contact__content
 
 	&__content {
 		max-width: 607px;
-		padding-right: 40px;
+		padding-right: 40px; padding-bottom: 10px;
 
 		& h2 {
 			font-family: var(--title-font);
 			font-size: 2.25rem;
+			line-height: 133.333333%;
 			@include _550 {
 				font-size: 2.5rem;
+				line-height: 100%;
 			}
 			
 			@include _992 {
 				font-size: 3rem;
+				padding-bottom: 10px;
 			}
-			line-height: 100%;
+			
 			text-transform: uppercase;
 		}
 
@@ -57,18 +76,18 @@
 			
 			@include _992 {
 				font-size: 1.125rem;
+				padding-top: 10px;
 			}
 		}
 
 		& ul {
 			padding-top: 20px;
 			@include _992 {
-				padding-top: 10px;
+				padding-top: 15px;
 			}
 		}
 
 		& li {
-			
 			@include _992 {
 				padding-top: 10px;
 			}
@@ -76,10 +95,12 @@
 
 		& a {
 			color: var(--dark);
-			font-weight: 400;
-			line-height: 150%;
+			font-weight: 300;
+			line-height: 200%;
+			font-size: 1.125rem;
 			@include _992 {
-				font-size: 1.125rem;
+				font-weight: 400;
+				line-height: 150%;
 			}
 		}
 	}
@@ -90,10 +111,14 @@
 		max-width: 484px;
 		margin: -12px 0;
 
-		padding-top: 60px;
+		padding-top: 45px;
 
-		@include _768 {
-			padding-top: 0;
+		/* @include _768 {
+			padding-top: 90px;
+		} */
+
+		@include _992 {
+			padding-top: 90px;
 		}
 	}
 
@@ -103,7 +128,7 @@
 		display: flex;
 		flex-direction: column;
 
-		padding: 12px 0;
+		padding: 14px 0;
 	}
 
 	// .contact__name
@@ -119,6 +144,9 @@
 	&__input {
 		margin-top: 5px;
 		font-size: 1.0625rem;
+		@include _992 {
+			font-size: 1.125rem;
+		}
 		line-height: 150%;
 		font-weight: 300;
 		color: var(--dark);
@@ -198,9 +226,9 @@
 
 	&__submit {
 
-		margin-top: 29px;
+		margin-top: 19px;
 		@include _992 {
-			margin-top: 49px;
+			margin-top: 39px;
 		}
 	}
 }

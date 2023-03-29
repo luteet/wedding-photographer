@@ -33,6 +33,7 @@
 
 		&--legend {
 			font-size: 1.25rem;
+			font-family: var(--title-font);
 
 			@include _550 {
 				font-size: 1.35rem;
@@ -52,11 +53,13 @@
 
 		&--list {
 
-			line-height: 125%;
+			line-height: 150%;
 			color: var(--dark);
+			text-transform: uppercase;
 			
 			@include _550 {
 				font-size: 1.25rem;
+				line-height: 125%;
 				flex-wrap: wrap;
 				flex-direction: row;
 			}
@@ -87,6 +90,9 @@
 
 				position: relative;
 				cursor: pointer;
+
+				font-family: var(--title-font);
+				
 				& input {
 					position: absolute;
 					left: 50%; top: 50%;
@@ -96,15 +102,20 @@
 					clip: rect(0 0 0 0);
 					overflow: hidden;
 				}
-				& label:hover span {
-					color: var(--dark-hover);
+
+				&:hover span {
+					opacity: .7;
 				}
-				& label:active span {
-					color: var(--dark-active);
+
+				&:active span {
+					opacity: .5;
 				}
+
 				& input:checked + span {
 					color: var(--gray);
+					opacity: 1;
 				}
+
 				& span {
 					transition: color .3s ease, opacity .3s ease;
 				}
@@ -137,6 +148,7 @@
 
 		text-align: center;
 		color: var(--dark);
+		display: block;
 
 		// .blog__item--image
 
@@ -162,14 +174,15 @@
 			color: var(--gray);
 			display: block;
 			margin-top: 30px;
+			font-weight: 500;
 
 			@include _768 {
 				font-size: 1.5rem;
 			}
 			
 			@include _992 {
-				margin-top: 53px;
-				font-size: 1.625rem;
+				margin-top: 50px;
+				font-size: 1.75rem;
 			}
 		}
 
@@ -180,13 +193,15 @@
 			font-size: 1.875rem;
 			line-height: 114.285714%;
 			margin-top: 20px;
+			font-family: var(--title-font);
+			text-transform: uppercase;
 			transition: opacity .3s ease;
 			@include _768 {
 				font-size: 2rem;
 			}
 			
 			@include _992 {
-				margin-top: 40px;
+				margin-top: 35px;
 				font-size: 2.625rem;
 			}
 		}
@@ -204,7 +219,15 @@
 	// .blog__footer
 
 	&__footer {
-		padding-top: 120px;
+		padding-top: 30px;
+		
+		@include _768 {
+			padding-top: 80px;
+		}
+		
+		@include _992 {
+			padding-top: 120px;
+		}
 	}
 
 	// .blog__nav
@@ -294,7 +317,7 @@
 		&--list {
 			flex: 1 1 100%;
 			order: 1;
-			padding-bottom: 10px;
+			padding-bottom: 30px;
 			@include _992 {
 				order: 2;
 				flex: 1 1 auto;

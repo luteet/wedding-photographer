@@ -24,7 +24,7 @@
 
 	&__content {
 
-		padding: 80px 0;
+		padding: 70px 0;
 
 		@include _550 {
 			padding: 100px 0;
@@ -38,7 +38,7 @@
 		}
 
 		@media (min-width: 1300px) {
-			grid-template-columns: minmax(300px, 23%) auto minmax(250px, 26%);
+			grid-template-columns: minmax(300px, 27%) auto minmax(250px, 26%);
 		}
 
 		// .blog-page__content--col
@@ -52,6 +52,8 @@
 	// .blog-page__title
 
 	&__title {
+		text-transform: uppercase;
+		
 	}
 
 	// .blog-page__event
@@ -60,13 +62,16 @@
 		display: block;
 		@include _992 {
 			margin-top: 30px;
-			
 		}
+
 		@media (min-width: 1300px) {
 			max-width: 308px;
 		}
+
 		margin-top: 20px;
+
 		font-size: 1.125rem;
+		font-weight: 600;
 		line-height: 177.777778%;
 	}
 
@@ -79,6 +84,8 @@
 		text-transform: uppercase;
 		color: var(--gray);
 		margin-top: 20px;
+		font-size: 1.125rem;
+		line-height: 166.666667%;
 		@include _992 {
 			margin-top: 30px;
 		}
@@ -110,6 +117,7 @@
 	&__quote {
 		font-weight: 600;
 		font-size: 1.125rem;
+		
 		@include _550 {
 			font-size: 1.25rem;
 		}

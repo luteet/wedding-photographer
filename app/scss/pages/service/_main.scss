@@ -68,40 +68,55 @@
 	// .service__content
 
 	&__content {
-		padding-top: 50px;
+		padding-top: 20px;
+
+		@include _768 {
+			padding-top: 50px;
+		}
 		
 		@include _992 {
 			padding-top: 100px;
+			margin-right: -30px;
 		}
+
 		& h2 {
 			font-family: var(--title-font);
-			font-weight: 600;
+			font-weight: 400;
 			font-size: 2.25rem;
+			line-height: 133.333333%;
 
 			@include _550 {
 				font-size: 2.5rem;
+			}
+
+			@include _768 {
+				line-height: 100%;
+				font-weight: 600;
 			}
 			
 			@include _992 {
 				font-size: 3rem;
 			}
-			line-height: 100%;
+			
 			text-transform: uppercase;
 		}
 
 		& h3 {
-			padding-top: 40px;
+			padding-top: 30px;
 
 			font-family: var(--title-font);
 			font-weight: 600;
 			font-size: 1.25rem;
 			line-height: 120%;
+
 			@include _550 {
 				font-size: 1.5rem;
 			}
 
 			@include _768 {
 				font-size: 2rem;
+				line-height: 100%;
+				padding-top: 40px;
 			}
 			
 			@include _992 {
@@ -111,18 +126,21 @@
 
 		& p {
 			font-weight: 300;
+			color: var(--dark);
 			font-size: 1rem;
+			line-height: 200%;
 			@include _992 {
 				font-size: 1.125rem;
+				padding-top: 20px;
 			}
-			line-height: 200%;
 
-			padding-top: 20px;
+			padding-top: 15px;
 		}
 
 		& blockquote p {
-			font-weight: 500;
+			font-weight: 400;
 			font-size: 1rem;
+			line-height: 187.5%;
 
 			@include _550 {
 				font-size: 1.175rem;
@@ -130,13 +148,15 @@
 
 			@include _768 {
 				font-size: 1.25rem;
+				font-weight: 500;
+				line-height: 150%;
 			}
 			
 			@include _992 {
 				font-size: 1.375rem;
 			}
 			
-			line-height: 150%;
+			
 		}
 	}
 

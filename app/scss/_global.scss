@@ -75,6 +75,9 @@ section {
 
 	flex: 1 0 auto;
 	position: relative;
+
+	display: flex;
+	flex-direction: column;
 }
 
 /* .lazy {
@@ -86,7 +89,7 @@ section {
 } */
 
 .section-end {
-	padding-bottom: 80px;
+	padding-bottom: 63px;
 	@include _992 {
 		padding-bottom: 167px;
 	}
@@ -97,8 +100,8 @@ section {
 	padding-right: var(--container-padding);
 	
 	@include _992 {
-		padding-left: 80px;
-		padding-right: 80px;
+		padding-left: 60px;
+		padding-right: 60px;
 		&._mob {
 			padding-left: 0; padding-right: 0;
 		}
@@ -152,7 +155,7 @@ section {
 
 	background: var(--dark);
 	color: var(--white);
-	
+
 	font-family: "Inter", sans-serif;
 	font-weight: 600;
 	font-size: 0.8125rem;
@@ -180,11 +183,13 @@ section {
 	width: 100%;
 	background: transparent;
 
+	@include _992 {
+		padding-left: 60px; padding-right: 60px;
+	}
+
 	&__logo img {
 		filter: none;
-		@include _992 {
-
-		}
+		
 	}
 
 	&__nav a {
