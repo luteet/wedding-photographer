@@ -1987,7 +1987,7 @@ body._mob-menu-active .header__logo img {
     padding-bottom: 10px
 }
 
-.contact__content h2 {
+.contact__content h1 {
     font-family: var(--title-font);
     font-size: 2.25rem;
     line-height: 133.333333%;
@@ -2263,7 +2263,7 @@ body._mob-menu-active .header__logo img {
         font-size: 1.25rem
     }
 
-    .contact__content h2 {
+    .contact__content h1 {
         font-size: 2.5rem;
         line-height: 100%
     }
@@ -2621,7 +2621,7 @@ body._mob-menu-active .header__logo img {
         padding-right: calc(50% - 1064px)
     }
 
-    .contact__content h2 {
+    .contact__content h1 {
         font-size: 3rem;
         padding-bottom: 10px
     }
