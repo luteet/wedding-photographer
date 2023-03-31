@@ -206,18 +206,12 @@ if(gridBlock) {
 }
 
 
-
-
-
-
-
-
 const blogFilter = document.querySelectorAll('.blog-filter');
 blogFilter.forEach(blogFilter => {
 	const inputs = blogFilter.querySelectorAll('input[type="radio"]');
 	inputs.forEach(input => {
 		input.addEventListener('change', function () {
-			blogFilter.submit();
+			window.location.href = blogFilter.dataset.url + "?" + input.name + '=' + input.value;
 		})
 	})
 })

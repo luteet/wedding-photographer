@@ -181,15 +181,18 @@
 
 		cursor: pointer;
 
-		& svg {
+		&::after {
+			content: '';
 			position: absolute;
 			right: 0; top: 50%;
 			transform: translate(0,-50%);
-			pointer-events: none;
+			width: 15px; height: 8px;
+			background: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L7.5 7L14 1' stroke='%231F1F1F' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+			center / contain no-repeat;
 		}
 
 		& select {
-			width: 100%;
+			width: 100%; padding-right: 20px;
 			color: var(--dark);
 			font-weight: 300;
 			cursor: pointer;
@@ -207,6 +210,7 @@
 		color: var(--dark);
 		resize: none;
 		max-width: 335px;
+		height: 95px;
 
 		transition: color .3s ease;
 		&::placeholder {
@@ -225,11 +229,6 @@
 	// .contact__submit
 
 	&__submit {
-
-		margin-top: 19px;
-		@include _992 {
-			margin-top: 39px;
-		}
 	}
 }
 

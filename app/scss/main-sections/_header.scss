@@ -61,6 +61,8 @@
 			max-width: 100%;
 			transition: filter .3s ease;
 			filter: invert(100%);
+			object-fit: contain;
+			object-position: left center;
 			user-select: none;
 			&:nth-child(1) {
 				display: none;
@@ -156,6 +158,17 @@
 				width: auto;
 			}
 
+			&.current_page_item a {
+				color: var(--gray);
+				&:hover {
+					opacity: 1;
+				}
+				
+				&:active {
+					opacity: 1;
+				}
+			}
+
 		}
 
 		& a {
@@ -185,9 +198,15 @@
 		}
 	}
 
-	&._fixed &__nav a {
+	&._fixed &__nav li a {
 		@include _992 {
 			color: var(--white);
+		}
+	}
+
+	&._fixed &__nav li.current_page_item a {
+		@include _992 {
+			color: var(--gray);
 		}
 	}
 
